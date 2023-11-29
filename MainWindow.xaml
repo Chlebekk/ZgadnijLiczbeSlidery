@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Zgadnij liczbę" FontSize="20" Background="#9c9c9c"/>
+        <WrapPanel Orientation="Vertical" Grid.Row="1">
+            <Label  Content="Trudność:" FontSize="18"/>
+            <RadioButton IsChecked="True" Checked="ezR_Checked" x:Name="ezR"  Content="Łatwa" FontSize="18"/>
+            <RadioButton  x:Name="meR" Checked="meR_Checked" Content="Średnia" FontSize="18"/>
+            <RadioButton x:Name="haR" Checked="haR_Checked" Content="Trudna" FontSize="18"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="2" Orientation="Vertical">
+            <Label Content="Start" FontSize="18" Margin="0,15,0,15"/>
+            <Slider x:Name="START" Width="200" Value="0" Minimum="0" Maximum="100"/>
+            <Label Content="Koniec" FontSize="18" Margin="0,15,0,15"/>
+            <Slider x:Name="END" Width="200" Value="10" Minimum="1" Maximum="100"/>
+        
+        </WrapPanel>
+        
     </Grid>
 </Window>

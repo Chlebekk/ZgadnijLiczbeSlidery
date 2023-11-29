@@ -24,5 +24,21 @@ namespace zadanieSlidery
         {
             InitializeComponent();
         }
+
+        private void ezR_Checked(object sender, RoutedEventArgs e)
+        {
+            Random rng = new Random();
+            START.SetValue(UidProperty, rng.NextInt64(100));
+        }
+
+        private void meR_Checked(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void haR_Checked(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
